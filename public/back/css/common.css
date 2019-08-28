@@ -30,6 +30,7 @@ ul {
 .mt_20 {
     margin-top: 20px;
 }
+
 .red {
     color: #A94442;
 }
@@ -138,7 +139,13 @@ ul {
 }
 
 .echarts_1,
-.echarts_2{
-    width: 48%;
+.echarts_2 {
+    width : 48%;
     height: 400px;
+}
+
+.table.table-bordered th,
+.table.table-bordered td {
+    text-align    : center;
+    vertical-align: middle;
 }
