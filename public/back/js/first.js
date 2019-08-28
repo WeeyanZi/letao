@@ -28,4 +28,48 @@ $(function () {
         })
     }
 
+    $('#addBtn').click(function () {
+        $('#addModal').modal('show');
+    })
+
+    //使用表单校验插件
+    $('#form').bootstrapValidator({
+        //2. 指定校验时的图标显示，默认是bootstrap风格
+        feedbackIcons: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+
+        fields: {
+            categoryName: {
+                validators: {
+                    notEmpty: {
+                        message: '请出入一级分类名称'
+                    }
+                }
+            },
+        }
+
+    });
+
+    $("#form").on('success.form.bv', function (e) {
+        e.preventDefault();
+        $.ajax({
+            type: 'post',
+            url: '/category/addTopCategory',
+            data: $('#form').serialize(),
+            dataType: 'json',
+            success: function (info) {
+                if (info.success) {
+                    $('#addModal').modal('hide');
+                    currentPage = 1;
+                    render();
+                    $('#form').data('bootstrapValidator').resetForm(true);
+                }
+            }
+
+        })
+    });
+
 })
