@@ -63,7 +63,7 @@ $(function () {
             success: function (info) {
                 if (info.success) {
                     $('#addModal').modal('hide');
-                    currentPage = 1;
+                    currentPage = 1; 
                     render();
                     $('#form').data('bootstrapValidator').resetForm(true);
                 }
