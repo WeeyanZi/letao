@@ -1,5 +1,5 @@
 $(function () {
-    var key = 'serach_list';
+    var key = 'search_list';
 
     render();
 
@@ -39,7 +39,7 @@ $(function () {
     $('.search_btn').click(function () {
         var val = $('.search_input').val().trim();
         if (val === '') {
-            alert('请输入搜索关键字');
+            mui.toast('请输入搜索关键字',{ duration:2000 });
             return;
         }
         var arr = getHistory();
@@ -54,7 +54,7 @@ $(function () {
         arr.unshift(val);
 
         localStorage.setItem(key, JSON.stringify(arr));
-        render();
+        // render();
         $('.search_input').val('');
 
         location.href = 'searchList.html?key=' + val;

@@ -106,24 +106,6 @@ img {
     position: relative;
 }
 
-.lt_main .lt_nav {
-    padding: 10px;
-}
-
-.lt_main .lt_nav li {
-    float: left;
-    width: 33.3%;
-}
-
-.lt_main .lt_nav li a {
-    display: block;
-}
-
-.lt_main .lt_nav li img {
-    display: block;
-    width  : 100%;
-}
-
 .lt_product {
     padding: 10px;
 }
@@ -164,4 +146,26 @@ img {
 
 .lt_product_item .oldPrice {
     text-decoration: line-through;
+}
+
+.lt_search {
+    padding : 10px;
+    position: relative;
+}
+
+.lt_search .search_input {
+    height       : 34px;
+    font-size    : 12px;
+    line-height  : 34px;
+    padding      : 0 65px 0 15px;
+    margin       : 0;
+    border       : 1px solid #007AFF;
+    border-radius: 5px;
+}
+
+.lt_search .search_btn {
+    position     : absolute;
+    top          : 10px;
+    right        : 10px;
+    border-radius: 0 5px 5px 0;
 }
