@@ -12,6 +12,7 @@ body {
 
 img {
     display: block;
+    width: 100%;
 }
 
 .lt_container {
@@ -168,4 +169,20 @@ img {
     top          : 10px;
     right        : 10px;
     border-radius: 0 5px 5px 0;
+}
+
+.lt_size span {
+    display    : inline-block;
+    width      : 25px;
+    height     : 25px;
+    border     : 1px solid #ccc;
+    line-height: 25px;
+    text-align : center;
+    font-size  : 12px;
+    margin     : 3px 0;
+}
+
+.lt_size span.current{
+    background-color: orange;
+    color: #fff;
 }
